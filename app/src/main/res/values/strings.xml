@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TheMartian</string>
+
+    //Content Description
+    <string name="cd_rover_image">Картинка ровера</string>
+    <string name="icon_favourites_content_description">Сохраненные фотографии</string>
+
+    //Navigation
+    <string name="nav_home">features/home</string>
 </resources>

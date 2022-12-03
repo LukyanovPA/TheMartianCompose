@@ -5,6 +5,8 @@ import com.pavellukyanov.themartiancompose.BuildConfig
 import com.pavellukyanov.themartiancompose.data.api.services.RoverService
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -16,6 +18,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 class ApiModule {
     companion object {
         private const val BASE_URL = "https://api.nasa.gov/mars-photos/api/v1/"

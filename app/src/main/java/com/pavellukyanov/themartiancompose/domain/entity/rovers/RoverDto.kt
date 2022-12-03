@@ -3,6 +3,7 @@ package com.pavellukyanov.themartiancompose.domain.entity.rovers
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+
 @Serializable
 class RoverManifestDto(
     @SerialName("photo_manifest") val roverItem: RoverItemDto

@@ -2,6 +2,7 @@ package com.pavellukyanov.themartiancompose.domain.util
 
 import com.pavellukyanov.themartiancompose.domain.entity.rovers.Rover
 import com.pavellukyanov.themartiancompose.domain.entity.rovers.RoverItemDto
+import com.pavellukyanov.themartiancompose.domain.entity.rovers.Rovers
 import com.pavellukyanov.themartiancompose.util.DateFormatter
 
 fun RoverItemDto.toRover(): Rover = Rover(
@@ -10,5 +11,6 @@ fun RoverItemDto.toRover(): Rover = Rover(
     launchDate = DateFormatter.format(launchDate),
     status = status,
     maxDate = DateFormatter.format(maxDate),
-    totalPhotos = totalPhotos
+    totalPhotos = totalPhotos,
+    type = Rovers.values().find { it.roverName == name }
 )
